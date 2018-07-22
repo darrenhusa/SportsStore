@@ -14,10 +14,11 @@ namespace SportsStore.Models
                 .FirstOrDefault();
             if(line == null)
             {
-                lineCollection.Add(new CartLine){
-                    Product = product;
-                    quantity = quantity;
-                }
+                lineCollection.Add(new CartLine
+                {
+                    Product = product,
+                    Quantity = quantity
+                });
             } else
             {
                 line.Quantity += quantity;
